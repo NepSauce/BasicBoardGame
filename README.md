@@ -1,20 +1,27 @@
-# Board Game Simulation
+# Board Game Simulator
 
-This is a simple board game simulation where you can create, move, and display different types of pieces on an 8x8 board. The program allows users to interact with the game via commands input through the console.
+This project simulates a simple board game with pieces that move across an 8x8 grid according to specific movement rules.
 
-## Features
+## Project Overview
 
-- **Create pieces** with different attributes (Fast, Slow, Flexible).
-- **Move pieces** according to their type (fast or slow).
-- **Display the board** with current piece positions.
-- **Help command** to display all available commands.
+- **Piece Class**: Represents a piece on the board with a name, color, and position.
+- **SlowPiece**: A piece that moves one step at a time, left or right.
+- **FastPiece**: A piece that moves multiple steps at a time, left or right.
+- **Flexible Pieces**: Pieces that can move in any direction (left, right, up, down).
+- **Board Class**: Contains the 8x8 grid, handles adding and moving pieces.
+- **GameDemo Class**: Provides a simple user interface to create pieces, move them, and display the board.
 
 ## Commands
 
-- `create x y [fast][flexible]` - Creates a new piece at position (x, y).
-  - Example: `create 3 4 fast flexible`
-- `move x y direction [spaces]` - Moves a piece from position (x, y) in a specified direction (up, down, left, right) by a given number of spaces.
-  - Example: `move 3 4 up 2`
-- `print` - Displays the current state of the board.
-- `exit` - Exits the program.
-- `help` - Displays the available commands.
+- **create x y [fast] [flexible]**: Creates a piece at (x, y) with optional fast and flexible attributes.
+- **move x y direction [spaces]**: Moves a piece at (x, y) in the specified direction (up, down, left, right), with optional space count for fast pieces.
+- **print**: Displays the board.
+- **help**: Lists all available commands.
+- **exit**: Exits the game.
+
+## Example Usage
+
+```bash
+> create 3 3 fast flexible
+Input a name for the new piece: Jedi
+Input a colour for the new piece: Red
